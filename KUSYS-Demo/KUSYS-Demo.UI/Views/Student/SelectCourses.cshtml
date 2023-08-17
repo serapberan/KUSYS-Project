@@ -1,0 +1,45 @@
+﻿
+@model SelectCoursesViewModel
+@{
+    ViewData["Title"] = "SelectCourses";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+}
+
+<h4>Ders Seçim Sayfası</h4>
+<hr />
+<br />
+
+<form method="post" asp-action="SelectCourses">
+    <input type="hidden" name="StudentId" value="@Model.StudentId" />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>SıraNo</th>
+                <th>Ders Kodu</th>
+                <th>Ders Adı</th>
+                <th>Seç</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model.AvailableCourses)
+            {
+                <tr>
+                    <td>@(Model.AvailableCourses.IndexOf(course) + 1)</td>
+                    <td>@course.CourseCode</td>
+                    <td>@course.CourseName</td>
+                    <td>
+                        <input type="checkbox" name="SelectedCourseIds" value="@course.CourseId"
+                        @(Model.SelectedCourseIds.Contains(course.CourseId) ? "checked" : "") />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <input type="hidden" name="StudentId" value="@Model.StudentId" />
+
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+<br />
+<a href="/Student/Index/" class="btn btn-primary">Öğrenci Listesi</a>

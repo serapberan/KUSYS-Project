@@ -26,17 +26,3 @@ C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.Core\obj\
 C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.pdb
 C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.genruntimeconfig.cache
 C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\ref\KUSYS-Demo.Core.dll
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\bin\Debug\net6.0\KUSYS-Demo.Core.deps.json
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\bin\Debug\net6.0\KUSYS-Demo.Core.runtimeconfig.json
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\bin\Debug\net6.0\KUSYS-Demo.Core.dll
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\bin\Debug\net6.0\KUSYS-Demo.Core.pdb
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.csproj.AssemblyReference.cache
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.AssemblyInfoInputs.cache
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.AssemblyInfo.cs
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.csproj.CoreCompileInputs.cache
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.dll
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\refint\KUSYS-Demo.Core.dll
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.pdb
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\KUSYS-Demo.Core.genruntimeconfig.cache
-C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.Core\obj\Debug\net6.0\ref\KUSYS-Demo.Core.dll

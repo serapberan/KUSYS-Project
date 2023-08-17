@@ -1,10 +1,7 @@
-﻿@using KUSYS_Demo.Entities.DTOs
-@model List<StudentDetailDto> 
-<!-- Rest of your view code -->
+﻿@model List<StudentDetailDto>
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_KusysLayaout.cshtml";
-
     int siraNo = 1;
 }
 
@@ -19,8 +16,7 @@
             <th scope="col">Ögrenci Soyadı</th>
             <th scope="col">Ders Kodu</th>
             <th scope="col">Ders Adı</th>
-            <th scope="col">Güncelle</th>
-            <th scope="col">Sil</th>
+
 
         </tr>
     </thead>
@@ -35,17 +31,13 @@
                     <td>@item.LastName</td>
                     <td>@item.CourseCode</td>
                     <td>@item.CourseName</td>
-                    <td><a href="/Student/UpdateStudent/@item.StudentId/" class="btn btn-success">Güncelle</a></td>
-                    <td><a href="/Student/DeleteStudent/@item.StudentId/" class="btn btn-danger">Sil</a></td>
-                </tr>
+                 </tr>
                 siraNo++;
             }
 
         }
     </tbody>
-</table> 
+</table>
 
-
-
-
-
+<br />
+<a href="/Student/Index/" class="btn btn-primary">Öğrenci Listesi</a>

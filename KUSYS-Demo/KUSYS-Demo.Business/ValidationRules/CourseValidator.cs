@@ -15,7 +15,7 @@ namespace KUSYS_Demo.Business.ValidationRules
                 RuleFor(x => x.CourseCode).NotEmpty().WithMessage("Ders Kodu Boş Geçilemez!");
                 RuleFor(x => x.CourseName).NotEmpty().WithMessage("Ders Adı Boş Geçilemez!");
                 RuleFor(x => x.CourseName).MinimumLength(2).WithMessage("Ders Adı Enaz 2 Karekter Olmalı.");
-                RuleFor(x => x.CourseName).MaximumLength(35).WithMessage("Ders Adı Enfazla 35 Karekter Olmalı.");
+                RuleFor(x => x.CourseName).MaximumLength(20).WithMessage("Ders Adı Enfazla 20 Karekter Olmalı.");
         }
     }
 }

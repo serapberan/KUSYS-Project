@@ -91,38 +91,38 @@ namespace KUSYS_Demo.UI.Controllers
         /// </summary>
         /// <param name="course"></param>
         /// <returns></returns>
-        [HttpPost]
-        public IActionResult UpdateCourse(Course course)
-        {
-            var values = _courseService.TGetByID(course.CourseId);
-            _courseService.TUpdate(course);
-            return RedirectToAction("Index");
-        }
-
         //[HttpPost]
         //public IActionResult UpdateCourse(Course course)
         //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var existingCourse = _courseService.TGetByID(course.CourseId);
-
-        //        if (existingCourse != null)
-        //        {
-        //            existingCourse.CourseCode = course.CourseCode;
-        //            existingCourse.CourseName = course.CourseName;
-
-        //            _courseService.TUpdate(existingCourse);
-
-        //            return RedirectToAction("Index"); // Başarıyla güncellendiğinde Index sayfasına yönlendir.
-        //        }
-        //        else
-        //        {
-        //            ModelState.AddModelError("", "Güncellenecek ders bulunamadı."); // Hata durumunda hata mesajı ekle.
-        //        }
-        //    }
-
-        //    return View(course); // Model valid değilse güncelleme sayfasını tekrar göster.
+        //    var values = _courseService.TGetByID(course.CourseId);
+        //    _courseService.TUpdate(course);
+        //    return RedirectToAction("Index");
         //}
+
+        [HttpPost]
+        public IActionResult UpdateCourse(Course course)
+        {
+            if (ModelState.IsValid)
+            {
+                var existingCourse = _courseService.TGetByID(course.CourseId);
+
+                if (existingCourse != null)
+                {
+                    existingCourse.CourseCode = course.CourseCode;
+                    existingCourse.CourseName = course.CourseName;
+
+                    _courseService.TUpdate(existingCourse);
+
+                    return RedirectToAction("Index"); // Başarıyla güncellendiğinde Index sayfasına yönlendir.
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Güncellenecek ders bulunamadı."); // Hata durumunda hata mesajı ekle.
+                }
+            }
+
+            return View(course); // Model valid değilse güncelleme sayfasını tekrar göster.
+        }
 
     }
 }

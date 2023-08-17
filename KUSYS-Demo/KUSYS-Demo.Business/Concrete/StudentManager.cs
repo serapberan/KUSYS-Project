@@ -15,33 +15,17 @@ namespace KUSYS_Demo.Business.Concrete
     public class StudentManager : IStudentService
     {
         IStudentDal _studentDal;
-        ICourseDal _courseDal;
-
-        public StudentManager(IStudentDal studentDal, ICourseDal courseDal = null)
+        ICourseService _courseService;
+        public StudentManager(IStudentDal studentDal, ICourseService courseService)
         {
             _studentDal = studentDal;
-            _courseDal = courseDal;
+            _courseService = courseService;
         }
 
-        public void TAdd(Student student)
+        public void TAdd(Student t)
         {
-            // Öğrencinin daha önce seçtiği dersleri al
-            var selectedCourses = _studentDal.GetDetailsById(student.StudentId).Select(detail => detail.CourseId);
-
-            // Eğer öğrenci zaten bu dersi seçmişse, hata fırlat
-            if (selectedCourses.Contains(student.CourseId))
-            {
-                throw new InvalidOperationException("Öğrenci zaten bu dersi seçmiş.");
-            }
-
-            _studentDal.Add(student);
+            _studentDal.Add(t);
         }
-
-
-        //public void TAdd(Student t)
-        //{
-        //    _studentDal.Add(t);
-        //}
 
         public void TDelete(Student t)
         {
@@ -67,6 +51,37 @@ namespace KUSYS_Demo.Business.Concrete
         {
             return _studentDal.GetDetailsById(id);
         }
+
+
+
+        public List<StudentDetailDto> TGetAvailableCourses(int studentId)
+        {
+            List<int> selectedCourseIds = _studentDal.GetSelectedCourseIds(studentId);
+            List<Course> allCourses = _courseService.TGetList();
+
+            var availableCourses = allCourses
+                .Where(course => !selectedCourseIds.Contains(course.CourseId))
+                .Select(course => new StudentDetailDto
+                {
+                    StudentId = studentId,
+                    CourseId = course.CourseId,
+                    //FirstName =  "", // Öğrencinin adı ve soyadı, ders bilgileri gibi alanları buradan almanız gerekecektir.
+                    //LastName = "",
+                    //BirthDate = DateTime.Now,
+                    CourseCode = course.CourseCode,
+                    CourseName = course.CourseName
+                })
+                .ToList();
+
+            return availableCourses;
+        }
+
+        public void TAssignCoursesToStudent(int studentId, List<int> courseIds)
+        {
+            // Seçilen dersleri öğrenciye atama işlemi burada gerçekleştirilir.
+             _studentDal.AssignCoursesToStudent(studentId, courseIds);
+        }
+
 
     }
 }

@@ -2192,11 +2192,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.Business\\KUSYS-Demo.Business.csproj",
+      "projectUniqueName": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.Business\\KUSYS-Demo.Business.csproj",
       "projectName": "KUSYS-Demo.Business",
-      "projectPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.Business\\KUSYS-Demo.Business.csproj",
+      "projectPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.Business\\KUSYS-Demo.Business.csproj",
       "packagesPath": "C:\\Users\\serap\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.Business\\obj\\",
+      "outputPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2217,11 +2217,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.DataAccess\\KUSYS-Demo.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.DataAccess\\KUSYS-Demo.DataAccess.csproj"
+            "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.DataAccess\\KUSYS-Demo.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.DataAccess\\KUSYS-Demo.DataAccess.csproj"
             },
-            "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.Entities\\KUSYS-Demo.Entities.csproj": {
-              "projectPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.Entities\\KUSYS-Demo.Entities.csproj"
+            "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.Entities\\KUSYS-Demo.Entities.csproj": {
+              "projectPath": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.Entities\\KUSYS-Demo.Entities.csproj"
             }
           }
         }

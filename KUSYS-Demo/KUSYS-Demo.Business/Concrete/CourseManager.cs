@@ -12,7 +12,11 @@ namespace KUSYS_Demo.Business.Concrete
 {
     public class CourseManager : ICourseService
     {
-       
+        /// <summary>
+        /// Soyut sınıfımız ile baglantı kuruyoruz 
+        /// <br> bunun ile  DataAcess de ki bagımlılıgımızı ortadan kaddırıyoruz.
+        /// <br> Orda hangi teknolojiyi kullanırsak kullanalım bizi etkilemiyecek(Degisim,yenilik..) 
+        /// </summary>
         ICourseDal _courseDal;
 
         public CourseManager(ICourseDal courseDal)
@@ -23,7 +27,7 @@ namespace KUSYS_Demo.Business.Concrete
         public void TAdd(Course t)
         {
             _courseDal.Add(t);
-          
+            //buraya sart ekliyeceğim 
         }
 
         public void TDelete(Course t)

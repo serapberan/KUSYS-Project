@@ -14,13 +14,11 @@ namespace KUSYS_Demo.Entities.Concrete
     /// </summary>
     public class Student : IEntity
     {
-        [Key]
         public int StudentId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
-        public int CourseId { get; set; }
-        public Course Courses { get; set; }
+        public List<StudentCourse> StudentCourses { get; set; }
 
     }
 }

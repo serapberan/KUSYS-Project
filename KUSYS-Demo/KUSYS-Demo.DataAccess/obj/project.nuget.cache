@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eTx6b7Rt8ay5RHLWcrweehZEQm9AhijW7NmGHmYmPTe4W0APdGpVso/o0kx97CpZ23hzeyPoNhVqSkj1mgvXsA==",
+  "dgSpecHash": "8P/0ACJHRrIhEl+maz3NiXozosrLXNVTx/1FZI7DDjamy8sid8G9Mjys2QoVzgzefhpHuWtVb55/Sm2i1zwx+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serap\\OneDrive\\Belgeler\\KUSYS-Demo\\KUSYS-Demo.DataAccess\\KUSYS-Demo.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.DataAccess\\KUSYS-Demo.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serap\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

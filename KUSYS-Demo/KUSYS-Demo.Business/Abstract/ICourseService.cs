@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace KUSYS_Demo.Business.Abstract
 {
-    /// <summary>
-    /// Temel Crud işlemleri ve kendine özgü metodları tanımlar.
-    /// </summary>
     public interface ICourseService : IGenericService<Course>
     {
-       
+        //List<Course> GetByCourseId(int id);
+        //List<Course> GetByCourseName(string courseName);
     }
 }

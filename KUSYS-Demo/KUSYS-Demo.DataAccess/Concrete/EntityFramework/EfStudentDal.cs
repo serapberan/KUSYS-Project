@@ -14,29 +14,58 @@ namespace KUSYS_Demo.DataAccess.Concrete.EntityFramework
 {
     /// <summary>
     /// Student Tablomuz için  EfEntityRepositoryBase --> ile generic olarak VT operasyon islemlerini gerceklestir.
-    /// <br/> Kendine özgü metodlar tanımlaya biliriz.
     /// </summary>
     public class EfStudentDal : EfEntityRepositoryBase<Student, KusysContext>, IStudentDal
     {
+
+  
+        public void AssignCoursesToStudent(int studentId, List<int> courseIds)
+        {
+            using (var context = new KusysContext())
+            {
+                foreach (var courseId in courseIds)
+                {
+                    context.StudentCourses.Add(new StudentCourse
+                    {
+                        StudentId = studentId,
+                        CourseId = courseId
+                    });
+                }
+
+                context.SaveChanges(); 
+            }
+        }
+
+
         public List<StudentDetailDto> GetDetailsById(int id)
         {
             using (var context = new KusysContext())
             {
-                var students = context.Students
-                    .Include(s => s.Courses)
-                    .Where(s => s.StudentId == id)
+                var studentDetails = context.StudentCourses
+                    .Where(sc => sc.StudentId == id)
+                    .Select(studentCourse => new StudentDetailDto
+                    {
+                        FirstName = studentCourse.Student.FirstName,
+                        LastName = studentCourse.Student.LastName,
+                        BirthDate = studentCourse.Student.BirthDate,
+                        CourseCode = studentCourse.Course.CourseCode,
+                        CourseName = studentCourse.Course.CourseName
+                    })
                     .ToList();
 
-                var studentList = students.Select(values => new StudentDetailDto
-                {
-                    FirstName = values.FirstName,
-                    LastName = values.LastName,
-                    BirthDate = values.BirthDate,
-                    CourseCode = values.Courses.CourseCode,
-                    CourseName = values.Courses.CourseName
-                }).ToList();
+                return studentDetails;
+            }
+        }
 
-                return studentList;
+
+
+
+        //Kim hangi dersi seçti
+        public List<int> GetSelectedCourseIds(int studentId)
+        {
+            using (var context = new KusysContext())
+            {
+                return context.StudentCourses.Where(s => s.StudentId == studentId).Select(sc => sc.CourseId).ToList();
             }
         }
 

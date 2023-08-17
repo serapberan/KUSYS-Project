@@ -9,69 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KUSYS_Demo.UI
 build_property.RootNamespace = KUSYS_Demo.UI
-build_property.ProjectDir = C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.UI\
+build_property.ProjectDir = C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\serap\OneDrive\Belgeler\KUSYS-Demo\KUSYS-Demo.UI
+build_property.MSBuildProjectDirectory = C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Course/AddCourse.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Course/AddCourse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEFkZENvdXJzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Course/Index.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Course/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Course/UpdateCourse.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Course/UpdateCourse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFVwZGF0ZUNvdXJzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Home/Index.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Home/Privacy.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/Error.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/_KusysLayaout.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/_KusysLayaout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9LdXN5c0xheWFvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/AddStudent.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/AddStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBZGRTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/Details.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/Index.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/UpdateStudent.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/SelectCourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTZWxlY3RDb3Vyc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Student/UpdateStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVcGRhdGVTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/_ViewImports.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/_ViewStart.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/serap/OneDrive/Belgeler/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/_Layout.cshtml]
+[C:/Users/serap/OneDrive/Belgeler/GitHub/CaseDemo/KUSYS-Demo/KUSYS-Demo.UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-77m93az0wj

@@ -1,11 +1,12 @@
-﻿@model KUSYS_Demo.Entities.Concrete.Student
+﻿@model Student
 @{
     ViewData["Title"] = "UpdateStudent";
     Layout = "~/Views/Shared/_KusysLayaout.cshtml";
 }
 
 <br />
-<h3> Ögrenci Güncelleme Sayfası</h3>
+<h1>Öğrenci Güncelleme Sayfası</h1>
+<br />
 <hr />
 <br />
 
@@ -13,23 +14,24 @@
     <input type="hidden" asp-for="StudentId" />
     <div class="mb-3">
         <label>Öğrenci Adı</label>
-        <input type="text" class="form-control" asp-for="FirstName">
+        <input type="text" asp-for="FirstName" class="form-control">
+        @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
     </div>
+
     <div class="mb-3">
         <label>Öğrenci Soyadı</label>
-        <input type="text" class="form-control" asp-for="LastName">
+        <input type="text" asp-for="LastName" class="form-control">
+        @* <span asp-validation-for="LastName" class="text-danger"></span> *@
     </div>
+
+
     <div class="mb-3">
-        <label>Doğum Tarihi</label>
-        <input type="datetime" class="form-control" asp-for="BirthDate">
+        <label>Birth Date</label>
+        @Html.TextBoxFor(model => model.BirthDate, "{0:dd-MMM-yyyy}", new { @class = "form-control" })
     </div>
-    <!-- Ders Seçimi -->
-    <div class="mb-3">
-        <label class="form-label">Ders Seçimi</label>
-        @Html.DropDownListFor(x=> x.CourseId,(List<SelectListItem>)ViewBag.CourseList, new { @class="form-control"})
-    </div>
-    <button type="submit" class="btn btn-primary">Güncelle</button>
+
+    <button class="btn btn-warning">Güncelle</button>
 </form>
 
 <br />
-<a href="/Student/Index/" class="btn btn-outline-success">Öğrenci Listesi</a>
+<a href="/Student/Index/" class="btn btn-primary">Öğrenci Listesi</a>

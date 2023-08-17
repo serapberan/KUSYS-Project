@@ -15,12 +15,27 @@ namespace KUSYS_Demo.DataAccess.Abstract
     public interface IStudentDal : IEntityRepository<Student>
     {
         /// <summary>
-        /// Seçilen öğrenci için Detay listesi işlemlerini gerçekleştirir.
-        /// <br/> Seçilen Öğrenciye göre ders bilgilerine ulaşmamızı sağlar.
+        /// //Seçilen öğrenci için  Detay listesi işlemlerini gerçekleştirir.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         List<StudentDetailDto> GetDetailsById(int id);
+        
+        
+        /// <summary>
+        /// Öğrencinin hangi dersleri sectiğini buluyoruz.
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <returns></returns>
+        List<int> GetSelectedCourseIds(int studentId);
+
+
+        /// <summary>
+        /// Öğrencinin seçtiği dersleri VT kaydet
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <param name="courseIds"></param>
+        void AssignCoursesToStudent(int studentId, List<int> courseIds);
 
     }
 }

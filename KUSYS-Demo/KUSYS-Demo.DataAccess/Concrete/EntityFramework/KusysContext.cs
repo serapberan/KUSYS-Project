@@ -20,7 +20,7 @@ namespace KUSYS_Demo.DataAccess.Concrete.EntityFramework
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=SERAPBERAN\\SQLEXPRESS;Database=DbKusys;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Server=SERAPBERAN\\SQLEXPRESS;Database=DbKusysCase;Integrated Security=True");
         }
 
         //------Tabloları tanıt
@@ -29,5 +29,8 @@ namespace KUSYS_Demo.DataAccess.Concrete.EntityFramework
         /// </summary>
         public DbSet<Course> Courses { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
+
+       
     }
 }

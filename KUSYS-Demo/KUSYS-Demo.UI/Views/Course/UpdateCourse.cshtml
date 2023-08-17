@@ -3,11 +3,12 @@
     ViewData["Title"] = "UpdateCourse";
     Layout = "~/Views/Shared/_KusysLayaout.cshtml";
 }
+<br />
+<h1>Ders Güncelleme Sayfası</h1>
+<br /><hr />
+<br />
 
-<h1>UpdateCourse</h1>
-
-<form asp-action="UpdateCourse" method="post">
-    <input type="hidden" asp-for="CourseId" />
+<form method="post">
     <label>Ders Kodu</label>
     <input type="text" asp-for="CourseCode" class="form-control" />
     <br />

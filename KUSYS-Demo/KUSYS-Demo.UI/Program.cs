@@ -15,7 +15,8 @@ builder.Services.AddScoped<ICourseDal, EfCourseDal>();
 builder.Services.AddScoped<IStudentService, StudentManager>();
 builder.Services.AddScoped<IStudentDal, EfStudentDal>();
 
-
+builder.Services.AddScoped<IStudentCourseService, StudentCourseManager>();
+builder.Services.AddScoped<IStudentCourseDal, EfStudentCourseDal>();
 
 var app = builder.Build();
 

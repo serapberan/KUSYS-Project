@@ -10,16 +10,12 @@ using System.Threading.Tasks;
 
 namespace KUSYS_Demo.Business.Abstract
 {
-    /// <summary>
-    /// Temel Crud işlemleri ve kendine özgü metodları tanımlar.
-    /// </summary>
     public interface IStudentService : IGenericService<Student>
     {
-        /// <summary>
-        /// Seçilen öğrenci detay bilgisini verir.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         List<StudentDetailDto> TGetDetailsById(int id);
+
+        List<StudentDetailDto> TGetAvailableCourses(int studentId);
+        void TAssignCoursesToStudent(int studentId, List<int> courseIds);
+
     }
 }

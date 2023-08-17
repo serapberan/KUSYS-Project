@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KUSYS_Demo.DataAccess.Migrations
 {
     [DbContext(typeof(KusysContext))]
-    [Migration("20230816232132_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230817114149_InitialMigDb")]
+    partial class InitialMigDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -56,9 +56,6 @@ namespace KUSYS_Demo.DataAccess.Migrations
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -69,25 +66,59 @@ namespace KUSYS_Demo.DataAccess.Migrations
 
                     b.HasKey("StudentId");
 
-                    b.HasIndex("CourseId");
-
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("KUSYS_Demo.Entities.Concrete.Student", b =>
+            modelBuilder.Entity("KUSYS_Demo.Entities.Concrete.StudentCourse", b =>
                 {
-                    b.HasOne("KUSYS_Demo.Entities.Concrete.Course", "Courses")
-                        .WithMany("Students")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentCourse");
+                });
+
+            modelBuilder.Entity("KUSYS_Demo.Entities.Concrete.StudentCourse", b =>
+                {
+                    b.HasOne("KUSYS_Demo.Entities.Concrete.Course", "Course")
+                        .WithMany("StudentCourses")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Courses");
+                    b.HasOne("KUSYS_Demo.Entities.Concrete.Student", "Student")
+                        .WithMany("StudentCourses")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("KUSYS_Demo.Entities.Concrete.Course", b =>
                 {
-                    b.Navigation("Students");
+                    b.Navigation("StudentCourses");
+                });
+
+            modelBuilder.Entity("KUSYS_Demo.Entities.Concrete.Student", b =>
+                {
+                    b.Navigation("StudentCourses");
                 });
 #pragma warning restore 612, 618
         }
