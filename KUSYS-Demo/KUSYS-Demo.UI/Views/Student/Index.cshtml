@@ -1,0 +1,44 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+
+    int siraNo = 1;
+}
+
+ <link href="~\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+<br />
+<h3> Öğrenci Listesi</h3>
+<hr /><br />
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th >SıraNo</th>
+            <th >Ögrenci Adı</th>
+            <th >Ögrenci Soyadı</th>
+            <th >Doğum Tarihi</th>
+            <th >Detay</th>
+            <th >Güncelle</th>
+            <th >Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@siraNo</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@(((DateTime)item.BirthDate).ToString("dd-MMM-yyyy"))</td>
+                <td><a href="/Student/Details/@item.StudentId/" class="btn btn-warning">Detay</a></td>
+                <td><a href="/Student/UpdateStudent/@item.StudentId/" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Student/DeleteStudent/@item.StudentId/" class="btn btn-danger">Sil</a></td>
+            </tr>
+            siraNo++;
+        }
+    </tbody>
+</table> 
+<a href="/Student/AddStudent/" class="btn btn-primary">Yeni Öğrenci Ekle</a>

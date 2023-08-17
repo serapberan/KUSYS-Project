@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<link href="~\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+<title>Kusys Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+      <br />
+        <a href="/Course/Index/" class="w3-bar-item w3-button">Ders Listesi</a>
+        <a href="/Student/Index/" class="w3-bar-item w3-button">Öğrenci Listesi</a>
+        <a href="/Student/AddStudent/" class="w3-bar-item w3-button">Yeni Öğrenci Ekle</a>
+        <a href="/Course/AddCourse/" class="w3-bar-item w3-button">Yeni Ders Ekle</a>
+        <br />
+        <button class="w3-bar-item w3-button w3-large"
+                onclick="w3_close()">
+            Gizle &times;
+        </button>
+    </div>
+
+    <div id="main">
+
+        <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+                <h3> Kusys Dashboard</h3>
+            </div>
+        </div>
+        <div class="w3-container">
+          @RenderBody()
+        </div>
+
+    </div>
+
+    <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
+</body>
+</html>

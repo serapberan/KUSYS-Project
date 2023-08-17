@@ -1,0 +1,51 @@
+﻿@using KUSYS_Demo.Entities.DTOs
+@model List<StudentDetailDto> 
+<!-- Rest of your view code -->
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+
+    int siraNo = 1;
+}
+
+<link href="~\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+<h3>Öğrenci Detay Sayfası</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">SıraNo</th>
+            <th scope="col">Ögrenci Adı</th>
+            <th scope="col">Ögrenci Soyadı</th>
+            <th scope="col">Ders Kodu</th>
+            <th scope="col">Ders Adı</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@siraNo</th>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.CourseCode</td>
+                    <td>@item.CourseName</td>
+                    <td><a href="/Student/UpdateStudent/@item.StudentId/" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Student/DeleteStudent/@item.StudentId/" class="btn btn-danger">Sil</a></td>
+                </tr>
+                siraNo++;
+            }
+
+        }
+    </tbody>
+</table> 
+
+
+
+
+

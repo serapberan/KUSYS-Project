@@ -1,0 +1,20 @@
+﻿@model Course
+@{
+    ViewData["Title"] = "UpdateCourse";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+}
+
+<h1>UpdateCourse</h1>
+
+<form asp-action="UpdateCourse" method="post">
+    <input type="hidden" asp-for="CourseId" />
+    <label>Ders Kodu</label>
+    <input type="text" asp-for="CourseCode" class="form-control" />
+    <br />
+
+    <label>Ders Adı</label>
+    <input type="text" asp-for="CourseName" class="form-control" />
+    <br />
+
+    <button class="btn btn-warning">Güncelle</button>
+</form>

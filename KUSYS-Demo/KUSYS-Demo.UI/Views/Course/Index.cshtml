@@ -1,0 +1,42 @@
+﻿@using KUSYS_Demo.Entities.Concrete
+@model List<Course>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+
+    int siraNo = 1;
+}
+
+ <link href="~\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+ <br />
+<h3>Ders Listesi</h3>
+<hr /> <br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>SıraNo</th>
+            <th>Ders Kodu</th>
+            <th>Ders Adı</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+       
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@siraNo</td>
+                <td>@item.CourseCode</td>
+                <td>@item.CourseName</td>
+                <td><a href="/Course/UpdateCourse/@item.CourseId" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Course/DeleteCourse/@item.CourseId/" class="btn btn-danger">Sil</a></td>
+            </tr>
+            siraNo++;
+        }
+    </tbody>
+</table> 
+<a href="/Course/AddCourse/" class="btn btn-primary">Yeni Ders Ekle</a>
+
+

@@ -1,0 +1,33 @@
+﻿@model KUSYS_Demo.Entities.Concrete.Course
+
+
+@{
+    ViewData["Title"] = "AddCourse";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+}
+
+<br />
+<h3>Yeni Ders Ekleme Sayfası</h3>
+<hr />
+<br />
+
+<form method="post">
+    <div class="mb-3">
+        <label>Ders Kodu</label>
+         <input type="text" asp-for="CourseCode" class="form-control">
+        <span asp-validation-for="CourseCode" class="text-danger"></span>
+      
+    </div>
+    <div class="mb-3">
+        <label >Ders Adı</label>
+        <input type="text" class="form-control" asp-for="CourseName">
+        <span asp-validation-for="CourseName" class="text-danger"></span>
+    </div>
+  
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>
+
+<br />
+<a href="/Course/Index/" class="btn btn-primary">Ders Listesi</a>
+   
+

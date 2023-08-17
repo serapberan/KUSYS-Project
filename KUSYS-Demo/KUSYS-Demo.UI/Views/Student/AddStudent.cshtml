@@ -1,0 +1,64 @@
+﻿ @model KUSYS_Demo.Entities.Concrete.Student
+@{
+    ViewData["Title"] = "AddStudent";
+    Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+}
+
+<br />
+<h3>Yeni Ögrenci Ekleme Sayfası</h3>
+<hr />
+<br />
+
+<form asp-action="AddStudent" method="post">
+    <div class="mb-3">
+        <label>Öğrenci Adı</label>
+        <input type="text" class="form-control" asp-for="FirstName">
+    </div>
+    <div class="mb-3">
+        <label>Öğrenci Soyadı</label>
+        <input type="text" class="form-control" asp-for="LastName">
+    </div>
+    <div class="mb-3">
+        <label>Doğum Tarihi</label>
+        <input type="datetime" class="form-control" asp-for="BirthDate">
+    </div>
+    <!-- Ders Seçimi -->
+    <div class="mb-3">
+        <label class="form-label">Ders Seçimi</label>
+        @Html.DropDownListFor(x=> x.CourseId,(List<SelectListItem>)ViewBag.CourseList, new { @class="form-control"})
+    </div>
+    <button type="submit" class="btn btn-primary">Öğrenci Ekle</button>
+</form>
+
+<br />
+<a href="/Student/Index/" class="btn btn-outline-success">Öğrenci Listesi</a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
