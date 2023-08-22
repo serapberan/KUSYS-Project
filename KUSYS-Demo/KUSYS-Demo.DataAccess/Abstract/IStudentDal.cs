@@ -37,5 +37,15 @@ namespace KUSYS_Demo.DataAccess.Abstract
         /// <param name="courseIds"></param>
         void AssignCoursesToStudent(int studentId, List<int> courseIds);
 
+        /// <summary>
+        /// Öğrencinin seçtiği dersler
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <returns></returns>
+        public List<StudentDetailDto> GetAvailableCourses(int studentId);
+
+
+
+
     }
 }

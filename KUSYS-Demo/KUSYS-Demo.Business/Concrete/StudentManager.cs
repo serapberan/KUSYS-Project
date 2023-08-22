@@ -1,25 +1,18 @@
 ﻿using KUSYS_Demo.Business.Abstract;
-using KUSYS_Demo.Core.Entities;
 using KUSYS_Demo.DataAccess.Abstract;
 using KUSYS_Demo.Entities.Concrete;
 using KUSYS_Demo.Entities.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KUSYS_Demo.Business.Concrete
 {
     public class StudentManager : IStudentService
     {
         IStudentDal _studentDal;
-        ICourseService _courseService;
-        public StudentManager(IStudentDal studentDal, ICourseService courseService)
+        ICourseDal _courseDal;
+        public StudentManager(IStudentDal studentDal, ICourseDal courseDal)
         {
             _studentDal = studentDal;
-            _courseService = courseService;
+            _courseDal = courseDal;
         }
 
         public void TAdd(Student t)
@@ -53,35 +46,21 @@ namespace KUSYS_Demo.Business.Concrete
         }
 
 
-
-        public List<StudentDetailDto> TGetAvailableCourses(int studentId)
-        {
-            List<int> selectedCourseIds = _studentDal.GetSelectedCourseIds(studentId);
-            List<Course> allCourses = _courseService.TGetList();
-
-            var availableCourses = allCourses
-                .Where(course => !selectedCourseIds.Contains(course.CourseId))
-                .Select(course => new StudentDetailDto
-                {
-                    StudentId = studentId,
-                    CourseId = course.CourseId,
-                    //FirstName =  "", // Öğrencinin adı ve soyadı, ders bilgileri gibi alanları buradan almanız gerekecektir.
-                    //LastName = "",
-                    //BirthDate = DateTime.Now,
-                    CourseCode = course.CourseCode,
-                    CourseName = course.CourseName
-                })
-                .ToList();
-
-            return availableCourses;
-        }
-
         public void TAssignCoursesToStudent(int studentId, List<int> courseIds)
         {
-            // Seçilen dersleri öğrenciye atama işlemi burada gerçekleştirilir.
-             _studentDal.AssignCoursesToStudent(studentId, courseIds);
+            _studentDal.AssignCoursesToStudent(studentId, courseIds);
         }
 
+        public List<int> GetSelectedCourseIds(int studentId)
+        {
+            return _studentDal.GetSelectedCourseIds(studentId);
+        }
+
+     
+        public List<StudentDetailDto> TGetAvailableCourses(int studentId)
+        {
+            return _studentDal.GetAvailableCourses(studentId);
+        }
 
     }
 }

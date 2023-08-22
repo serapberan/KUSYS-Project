@@ -23,8 +23,6 @@ namespace KUSYS_Demo.Business.Concrete
             _studentCourseDal.Add(t);
         }
 
-      
-
         public void TDelete(StudentCourse t)
         {
             _studentCourseDal.Delete(t);

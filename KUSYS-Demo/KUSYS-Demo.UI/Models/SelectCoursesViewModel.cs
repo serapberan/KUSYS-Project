@@ -4,6 +4,9 @@ using KUSYS_Demo.Entities.DTOs;
 
 namespace KUSYS_Demo.UI.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SelectCoursesViewModel
     {
         public int StudentId { get; set; }

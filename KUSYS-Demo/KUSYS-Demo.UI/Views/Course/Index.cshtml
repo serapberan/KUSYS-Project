@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_KusysLayaout.cshtml";
+    int siraNo = 1;
 }
 
  <link href="~\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
@@ -24,12 +25,13 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>1</td>
+                <td>@siraNo</td>
                 <td>@item.CourseCode</td>
                 <td>@item.CourseName</td>
                 <td><a href="/Course/UpdateCourse/@item.CourseId" class="btn btn-success">Güncelle</a></td>
                 <td><a href="/Course/DeleteCourse/@item.CourseId/" class="btn btn-danger">Sil</a></td>
             </tr>
+            siraNo++;
         }
     </tbody>
 </table> 

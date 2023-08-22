@@ -9,7 +9,7 @@
 <hr />
 <br />
 
-<form method="post" asp-action="SelectCourses">
+ <form method="post" asp-action="SelectCourses">
     <input type="hidden" name="StudentId" value="@Model.StudentId" />
     <table class="table table-striped">
         <thead>
@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var course in Model.AvailableCourses)
+              @foreach (var course in Model.AvailableCourses)
             {
                 <tr>
                     <td>@(Model.AvailableCourses.IndexOf(course) + 1)</td>
@@ -32,7 +32,8 @@
                         @(Model.SelectedCourseIds.Contains(course.CourseId) ? "checked" : "") />
                     </td>
                 </tr>
-            }
+            }  
+
         </tbody>
     </table>
 
@@ -40,6 +41,8 @@
 
     <br />
     <button type="submit" class="btn btn-success">Kaydet</button>
-</form>
+</form> 
 <br />
 <a href="/Student/Index/" class="btn btn-primary">Öğrenci Listesi</a>
+
+

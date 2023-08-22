@@ -8,7 +8,8 @@
 <br /><hr />
 <br />
 
-<form method="post">
+<form asp-action="UpdateCourse" method="post">
+    <input type="hidden" asp-for="CourseId" />
     <label>Ders Kodu</label>
     <input type="text" asp-for="CourseCode" class="form-control" />
     <br />

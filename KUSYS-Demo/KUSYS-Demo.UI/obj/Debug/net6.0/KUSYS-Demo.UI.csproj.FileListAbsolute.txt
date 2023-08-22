@@ -516,3 +516,7 @@ C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.UI\obj\De
 C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.UI\obj\Debug\net6.0\KUSYS-Demo.UI.pdb
 C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.UI\obj\Debug\net6.0\KUSYS-Demo.UI.genruntimeconfig.cache
 C:\Users\serap\OneDrive\Belgeler\GitHub\CaseDemo\KUSYS-Demo\KUSYS-Demo.UI\obj\Debug\net6.0\ref\KUSYS-Demo.UI.dll
+C:\Users\serap\OneDrive\Desktop\KUSYS-Demo\KUSYS-Demo.UI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\serap\OneDrive\Desktop\KUSYS-Demo\KUSYS-Demo.UI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\serap\OneDrive\Desktop\KUSYS-Demo\KUSYS-Demo.UI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\serap\OneDrive\Desktop\KUSYS-Demo\KUSYS-Demo.UI\obj\Debug\net6.0\KUSYS-Demo.UI.MvcApplicationPartsAssemblyInfo.cs

@@ -18,25 +18,6 @@ namespace KUSYS_Demo.DataAccess.Concrete.EntityFramework
     public class EfStudentDal : EfEntityRepositoryBase<Student, KusysContext>, IStudentDal
     {
 
-  
-        public void AssignCoursesToStudent(int studentId, List<int> courseIds)
-        {
-            using (var context = new KusysContext())
-            {
-                foreach (var courseId in courseIds)
-                {
-                    context.StudentCourses.Add(new StudentCourse
-                    {
-                        StudentId = studentId,
-                        CourseId = courseId
-                    });
-                }
-
-                context.SaveChanges(); 
-            }
-        }
-
-
         public List<StudentDetailDto> GetDetailsById(int id)
         {
             using (var context = new KusysContext())
@@ -49,7 +30,8 @@ namespace KUSYS_Demo.DataAccess.Concrete.EntityFramework
                         LastName = studentCourse.Student.LastName,
                         BirthDate = studentCourse.Student.BirthDate,
                         CourseCode = studentCourse.Course.CourseCode,
-                        CourseName = studentCourse.Course.CourseName
+                        CourseName = studentCourse.Course.CourseName,
+                        CourseId = studentCourse.Course.CourseId
                     })
                     .ToList();
 
@@ -61,11 +43,70 @@ namespace KUSYS_Demo.DataAccess.Concrete.EntityFramework
 
 
         //Kim hangi dersi seçti
+        /// <summary>
+        /// seçilen öğrenci Id si ile seçtiği derslerin listesini dndürür.
+        /// <br/> Hangi öğrenci hangi dersleri seçti işlemini yapar.
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <returns></returns>
         public List<int> GetSelectedCourseIds(int studentId)
         {
             using (var context = new KusysContext())
             {
                 return context.StudentCourses.Where(s => s.StudentId == studentId).Select(sc => sc.CourseId).ToList();
+            }
+        }
+
+
+        /// <summary>
+        /// Seçilen dersleri öğrenciye aktarma işlemini yapr.
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <param name="courseIds"></param>
+        public void AssignCoursesToStudent(int studentId, List<int> courseIds)
+        {
+            using (var context = new KusysContext())
+            {
+                foreach (var courseId in courseIds)
+                {
+                    context.StudentCourses.Add(new StudentCourse
+                    {
+                        StudentId = studentId,
+                        CourseId = courseId
+                    });
+                }
+                context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// Öğrencinin seçtiği dersler dışındaki dersleri listeliyoruz 
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <returns></returns>
+        public List<StudentDetailDto> GetAvailableCourses(int studentId)
+        {
+            using (var context = new KusysContext())
+            {
+                // daha önce hangi ders seçilmiş
+                List<int> selectedCourseIds = context.StudentCourses
+                    .Where(sc => sc.StudentId == studentId)
+                    .Select(sc => sc.CourseId)
+                    .ToList();
+
+                // Seçmediği dersler
+                List<StudentDetailDto> availableCourses = context.Courses
+                    .Where(course => !selectedCourseIds.Contains(course.CourseId))  
+                    .Select(course => new StudentDetailDto
+                    {
+                        CourseId = course.CourseId,
+                        CourseCode = course.CourseCode,
+                        CourseName = course.CourseName
+                    
+                    })
+                    .ToList();
+
+                return availableCourses;
             }
         }
 

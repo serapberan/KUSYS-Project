@@ -27,14 +27,14 @@ namespace KUSYS_Demo.UI.Controllers
         /// <returns></returns>
         public IActionResult Index()
         {
-           var values =  _studentService.TGetList();
+            var values = _studentService.TGetList();
             return View(values);
         }
 
         [HttpGet]
         public IActionResult AddStudent()
         {
-            var values = _studentService.TGetList();   
+            var values = _studentService.TGetList();
             return View();
         }
 
@@ -67,10 +67,10 @@ namespace KUSYS_Demo.UI.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateStudent(Student student) 
+        public IActionResult UpdateStudent(Student student)
         {
             _studentService.TUpdate(student);
-            
+
             return RedirectToAction("Index");
 
         }
@@ -98,14 +98,19 @@ namespace KUSYS_Demo.UI.Controllers
         }
 
 
+        /// <summary>
+        /// Ders Seçme işlemi
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
-        public IActionResult SelectCourses(int id) // Burada "id" parametresi URL'den gelecek
+        public IActionResult SelectCourses(int id)
         {
             List<StudentDetailDto> availableCourses = _studentService.TGetAvailableCourses(id);
 
             var viewModel = new SelectCoursesViewModel
             {
-                StudentId = id, // Öğrenci ID'sini aldığımız route parametresi
+                StudentId = id,
                 AvailableCourses = availableCourses,
                 SelectedCourseIds = new List<int>()
             };
@@ -114,32 +119,21 @@ namespace KUSYS_Demo.UI.Controllers
         }
 
 
+        /// <summary>
+        /// Ders seçme işlemleri
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
-        public IActionResult SelectCourses(SelectCoursesViewModel viewModel)
+        public IActionResult SelectCourses(SelectCoursesViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                viewModel.AvailableCourses = _studentService.TGetAvailableCourses(viewModel.StudentId);
-                return View(viewModel);
-            }
+              
+                _studentService.TAssignCoursesToStudent(model.StudentId, model.SelectedCourseIds);
 
-            _studentService.TAssignCoursesToStudent(viewModel.StudentId, viewModel.SelectedCourseIds);
-
-            return RedirectToAction("Index");
+                return RedirectToAction("Index", "Student");
+        
+            return View(model); 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

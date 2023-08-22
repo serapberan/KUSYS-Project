@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ckJbMT/6bwfgE5OVQFm4BGDJhRjeT6SIY+DRYpIB5MpK0rUNCjVv9budkAjo5iiTITubVX3SPGnm97tFsvp3Qg==",
+  "dgSpecHash": "3mmwA8hoWUbyAgqiDO39IDe7C+v3muDqHGF2g9z5d1vMXZnW+zdyjycQksZpF/dRptoUuOpqmZgcohWrtyC4Rw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serap\\OneDrive\\Belgeler\\GitHub\\CaseDemo\\KUSYS-Demo\\KUSYS-Demo.Business\\KUSYS-Demo.Business.csproj",
+  "projectFilePath": "C:\\Users\\serap\\OneDrive\\Desktop\\KUSYS-Demo\\KUSYS-Demo.Business\\KUSYS-Demo.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serap\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
